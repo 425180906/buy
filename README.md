@@ -1,5 +1,10 @@
 # app1
 
+## 简介
+```angular2
+模仿产权交易信息网站的静态页面
+```
+
 ## Project setup
 ```
 npm install
