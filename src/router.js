@@ -19,6 +19,12 @@ const beforgg = () => import('./views/Cqjy/Notice/dygg2018/dygg2018.vue');
 const jygg = () => import('./views/Cqjy/Notice/jygg/jygg.vue');
 const zbxm = () => import('./views/Cqjy/Notice/zbxm/zbxm.vue');
 
+/* 交易项目路由 */
+
+const cjxm =()=> import('./views/Cqjy/Transaction/cjxm/cjxm.vue')
+const gyxm =()=> import('./views/Cqjy/Transaction/gyxm/gyxm.vue')
+const xqxm =()=> import('./views/Cqjy/Transaction/xqxm/xqxm.vue')
+
 Vue.use(Router);
 
 export default new Router({
@@ -35,6 +41,7 @@ export default new Router({
                     name:'Home',
                     component: Home,
                 },
+                /* 公告信息路由 */
                 {
                     path: '/Notice',
                     name: 'Notice',
@@ -68,31 +75,57 @@ export default new Router({
                         },
                     ]
                 },
+
+                /* 抵押融资路由 */
                 {
                     path: '/Mortgage',
                     name: 'Mortgage',
                     component: Mortgage,
                 },
+
+                /* 交易项目路由 */
                 {
                     path: '/Transaction',
                     name: 'Transaction',
                     component: Transaction,
+                    redirect:'/Transaction/gyxm',
+                    children:[
+                        {
+                            path:'/Transaction/gyxm',
+                            name:'gyxm',
+                            component: gyxm,
+                        },
+                        {
+                            path:'/Transaction/xqxm',
+                            name:'xqxm',
+                            component: xqxm,
+                        },
+                        {
+                            path:'/Transaction/cjxm',
+                            name:'cjxm',
+                            component: cjxm,
+                        },
+                    ]
                 },
+                /* 业务统计路由 */
                 {
                     path: '/Business',
                     name: 'Business',
                     component: Business,
                 },
+                /* 政策服务路由 */
                 {
                     path: '/Service',
                     name: 'Service',
                     component: Service,
                 },
+                /* 交易网点路由 */
                 {
                     path: '/PayDot',
                     name: 'PayDot',
                     component: PayDot,
                 },
+                /* 个人中心路由 */
                 {
                     path: '/Personal',
                     name: 'Personal',
