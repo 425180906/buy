@@ -12,18 +12,34 @@ const Service = () => import('./views/Cqjy/Service/Service.vue');
 const PayDot = () => import('./views/Cqjy/PayDot/PayDot.vue');
 const Personal = () => import('./views/Cqjy/Personal/Personal.vue');
 
-/* 公告消息路由 */
+/* 公告消息子路由 */
 const cjgg = () => import('./views/Cqjy/Notice/cjgg/cjgg.vue');
 const dygg = () => import('./views/Cqjy/Notice/dygg/dygg.vue');
 const beforgg = () => import('./views/Cqjy/Notice/dygg2018/dygg2018.vue');
 const jygg = () => import('./views/Cqjy/Notice/jygg/jygg.vue');
 const zbxm = () => import('./views/Cqjy/Notice/zbxm/zbxm.vue');
 
-/* 交易项目路由 */
+/* 交易项目子路由 */
 
-const cjxm =()=> import('./views/Cqjy/Transaction/cjxm/cjxm.vue')
-const gyxm =()=> import('./views/Cqjy/Transaction/gyxm/gyxm.vue')
-const xqxm =()=> import('./views/Cqjy/Transaction/xqxm/xqxm.vue')
+const cjxm = () => import('./views/Cqjy/Transaction/cjxm/cjxm.vue');
+const gyxm = () => import('./views/Cqjy/Transaction/gyxm/gyxm.vue');
+const xqxm = () => import('./views/Cqjy/Transaction/xqxm/xqxm.vue');
+
+/* 抵押融资子路由 */
+const gsjs = () => import('./views/Cqjy/Mortgage/gsjs/gsjs.vue');
+
+/* 业务统计子路由 */
+const jytj = () => import('./views/Cqjy/Business/jytj/jytj.vue');
+const dbtj = () => import('./views/Cqjy/Business/dbtj/dbtj.vue');
+
+/* 政策服务子路由 */
+const zcfg = () => import('./views/Cqjy/Service/zcfg/zcfg.vue');
+const zjgd = () => import('./views/Cqjy/Service/zjgd/zjgd.vue');
+const zlxz = () => import('./views/Cqjy/Service/zlxz/zlxz.vue');
+
+/* 个人中心路由 */
+const grgy = () => import('./views/Cqjy/Personal/grgy/grgy.vue');
+const grxq = () => import('./views/Cqjy/Personal/grxq/grxq.vue');
 
 Vue.use(Router);
 
@@ -35,10 +51,10 @@ export default new Router({
             path: '/',
             name: 'Head',
             component: Head,
-            children:[
+            children: [
                 {
-                    path:'/',
-                    name:'Home',
+                    path: '/',
+                    name: 'Home',
                     component: Home,
                 },
                 /* 公告信息路由 */
@@ -46,32 +62,32 @@ export default new Router({
                     path: '/Notice',
                     name: 'Notice',
                     component: Notice,
-                    redirect:'/Notice/cjgg',
+                    redirect: '/Notice/cjgg',
                     children: [
                         {
-                            path:'/Notice/cjgg',
-                            name:'cjgg',
-                            component:cjgg,
+                            path: '/Notice/cjgg',
+                            name: 'cjgg',
+                            component: cjgg,
                         },
                         {
-                            path:'/Notice/newgg',
-                            name:'dygg',
-                            component:dygg
+                            path: '/Notice/newgg',
+                            name: 'dygg',
+                            component: dygg
                         },
                         {
-                            path:'/Notice/beforgg',
-                            name:'dygg2018',
-                            component:beforgg
+                            path: '/Notice/beforgg',
+                            name: 'dygg2018',
+                            component: beforgg
                         },
                         {
-                            path:'/Notice/jygg',
-                            name:'jygg',
-                            component:jygg
+                            path: '/Notice/jygg',
+                            name: 'jygg',
+                            component: jygg
                         },
                         {
-                            path:'/Notice/zbxm',
-                            name:'zbxm',
-                            component:zbxm
+                            path: '/Notice/zbxm',
+                            name: 'zbxm',
+                            component: zbxm
                         },
                     ]
                 },
@@ -81,6 +97,14 @@ export default new Router({
                     path: '/Mortgage',
                     name: 'Mortgage',
                     component: Mortgage,
+                    redirect: '/Mortgage/gsjs',
+                    children: [
+                        {
+                            path: '/Mortgage/gsjs',
+                            name: 'gsjs',
+                            component: gsjs
+                        }
+                    ]
                 },
 
                 /* 交易项目路由 */
@@ -88,21 +112,21 @@ export default new Router({
                     path: '/Transaction',
                     name: 'Transaction',
                     component: Transaction,
-                    redirect:'/Transaction/gyxm',
-                    children:[
+                    redirect: '/Transaction/gyxm',
+                    children: [
                         {
-                            path:'/Transaction/gyxm',
-                            name:'gyxm',
+                            path: '/Transaction/gyxm',
+                            name: 'gyxm',
                             component: gyxm,
                         },
                         {
-                            path:'/Transaction/xqxm',
-                            name:'xqxm',
+                            path: '/Transaction/xqxm',
+                            name: 'xqxm',
                             component: xqxm,
                         },
                         {
-                            path:'/Transaction/cjxm',
-                            name:'cjxm',
+                            path: '/Transaction/cjxm',
+                            name: 'cjxm',
                             component: cjxm,
                         },
                     ]
@@ -112,12 +136,43 @@ export default new Router({
                     path: '/Business',
                     name: 'Business',
                     component: Business,
+                    redirect: '/Business/jytj',
+                    children: [
+                        {
+                            path: '/Business/jytj',
+                            name: 'jytj',
+                            component: jytj,
+                        },
+                        {
+                            path: '/Business/dbtj',
+                            name: 'dbtj',
+                            component: dbtj,
+                        }
+                    ]
                 },
                 /* 政策服务路由 */
                 {
                     path: '/Service',
                     name: 'Service',
                     component: Service,
+                    redirect: '/Service/zcfg',
+                    children: [
+                        {
+                            path: '/Service/zcfg',
+                            name: 'zcfg',
+                            component: zcfg
+                        },
+                        {
+                            path: '/Service/zjgd',
+                            name: 'zjgd',
+                            component: zjgd
+                        },
+                        {
+                            path: '/Service/zlxz',
+                            name: 'zlxz',
+                            component: zlxz
+                        }
+                    ]
                 },
                 /* 交易网点路由 */
                 {
@@ -130,14 +185,27 @@ export default new Router({
                     path: '/Personal',
                     name: 'Personal',
                     component: Personal,
-                },
-            ]
-        },
-        {
-            path:'/Login',
-            name:'Login',
-            component: Login,
-        }
+                    redirect: '/Personal/grgy',
+                    children: [
+                        {
+                            path: '/Personal/grgy',
+                            name: 'grgy',
+                            component: grgy
+                        },
+                        {
+                            path: '/Personal/grxq',
+                            name: 'grxq',
+                            component: grxq
+                        },
 
-    ],
-});
+                    ]
+                },
+                {
+                    path: '/Login',
+                    name: 'Login',
+                    component: Login,
+                }
+
+            ],
+        }]
+})

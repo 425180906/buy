@@ -1,7 +1,8 @@
 <template>
     <div class="cjgg-content">
+        <!-- 交易项目查询盒子 star -->
         <div class="cjggcx-box">
-            <table class="cjggcx" style="width: 100%;border: 0;border-collapse: collapse;">
+            <table class="cjggcx">
                 <tr>
                     <td>
                         <p>项目编号:</p>
@@ -54,12 +55,48 @@
                 </tr>
             </table>
         </div>
+        <!-- 交易项目查询盒子 end -->
+        <!-- 交易项目查询列表 star -->
+        <div>
+            <table class="xmcxlist">
+                <tr>
+                    <th style="width: 18%">项目编号</th>
+                    <th>项目名称</th>
+                    <th style="width: 18%">挂牌价格（元）</th>
+                    <th style="width: 15%">截止日期</th>
+                </tr>
+                <tr v-for="item in buyList" :key="item.index">
+                    <td>{{item.xmid}}</td>
+                    <td style="text-align: left;padding-left: 10px;"><a :href="item.url">{{item.xmname}}</a></td>
+                    <td>{{item.money}}</td>
+                    <td>{{item.time}}</td>
+                </tr>
+            </table>
+        </div>
+        <!-- 交易项目查询列表 end -->
+        <!-- 列表分页pages star -->
+        <div class="pages">
+            <a class="cur">1</a>
+            <a>2</a>
+            <a>3</a>
+        </div>
+        <!-- 列表分页pages end -->
+
     </div>
 </template>
 
 <script>
     export default {
-        name: "gyxm"
+        name: "gyxm",
+        data() {
+            return {
+                buyList: [
+                    {
+                        xmid: '2018AC370112104311',url:'http://www.jnnccqjyw.cn/article/gpxm/pro.shtml?6e0e8891-3273-4c8c-a579-496397b97d76', xmname: '出让济南市历城区荷花路街道程家庄村70亩农村土地经营权', money: '3000', time: ''
+                    }
+                ]
+            }
+        }
     }
 </script>
 
@@ -75,6 +112,10 @@
         padding: 10px 0;
 
         .cjggcx {
+            width: 100%;
+            border: 0;
+            border-collapse: collapse;
+
             tr td {
                 padding: 5px 0;
 
@@ -137,6 +178,57 @@
         background: #fff url(../../../../image/date_icon.png) right center no-repeat;
         margin-right: 10px;
         width: 150px;
+    }
+
+    .xmcxlist{
+        width: 100%;
+        border: 0;
+        border-collapse: collapse;
+        text-align: center;
+        tr{
+            th{
+                font-weight: normal;
+                background: #eeeeee;
+                border: 1px solid #dedede;
+                height: 39px;
+                line-height: 39px;
+            }
+            td{
+                border: 1px solid #dedede;
+                height: 39px;
+                line-height: 39px;
+                padding: 0;
+                a{
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .pages{
+        width: 100%;
+        text-align: center;
+        padding-top: 25px;
+        a{
+            background: #fff;
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            line-height: 34px;
+            border: 1px solid #dddddd;
+            margin: 0 5px;
+            cursor: pointer;
+            &:hover{
+                background: #22b45f;
+                border: 1px solid #22b45f;
+                color: #fff;
+            }
+        }
+        .cur{
+            background: #22b45f;
+            border: 1px solid #22b45f;
+            color: #fff;
+        }
     }
 
 </style>

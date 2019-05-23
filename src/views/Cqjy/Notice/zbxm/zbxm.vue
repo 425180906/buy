@@ -38,7 +38,7 @@
                     <th>类型</th>
                 </tr>
                 <tr v-for="item in list" :key="item.index">
-                    <td  >{{item.xmname}}</td>
+                    <td><a :href="item.url" style="color: black">{{item.xmname}}</a></td>
                     <td>{{item.jfname}}</td>
                     <td>{{item.money}}</td>
                     <td>{{item.type}}</td>
@@ -60,13 +60,13 @@
 <script>
     export default {
         name: "cjgg",
-        data(){
+        data() {
             return {
-             list:[
-                 {
-                    xmname:"房屋租赁",jfname:"李建新、孙其栋、张林",money:"31000.000000",type:"其他"
-                 }
-             ]
+                list: [
+                    {
+                        xmname: "房屋租赁", url:"http://www.jnnccqjyw.cn/article/gpxm/pro.shtml?476b6633-7946-44ab-aa20-79723946d1c2", jfname: "李建新、孙其栋、张林", money: "31000.000000", type: "其他"
+                    }
+                ]
             }
         }
     }
@@ -84,11 +84,12 @@
         padding: 10px 0;
 
         .cjggcx {
+
             tr td {
                 padding: 5px 0;
                 float: left;
 
-                p{
+                p {
                     float: left;
                     width: 100px;
                     text-align: right;
@@ -96,7 +97,7 @@
                     line-height: 28px;
                 }
 
-                select{
+                select {
                     float: left;
                     height: 28px;
                     line-height: 28px;
@@ -106,7 +107,7 @@
                     margin-left: 10px;
                 }
 
-                input{
+                input {
                     height: 28px;
                     line-height: 28px;
                     width: 150px;
@@ -117,7 +118,7 @@
                     padding-left: 8px;
                 }
 
-                a{
+                a {
                     width: 88px;
                     height: 30px;
                     line-height: 30px;
@@ -133,17 +134,19 @@
         }
     }
 
-    .cxlist{
+    .cxlist {
         width: 100%;
         text-align: center;
-        th{
+        border-collapse: collapse;
+        th {
             font-weight: normal;
             background: #eeeeee;
             border: 1px solid #dedede;
             height: 39px;
             line-height: 39px;
         }
-        td{
+
+        td {
             border: 1px solid #dedede;
             height: 39px;
             line-height: 39px;
@@ -151,10 +154,11 @@
         }
     }
 
-    .listtabs{
+    .listtabs {
         text-align: center;
         padding-top: 25px;
-        a{
+
+        a {
             background: #fff;
             display: inline-block;
             width: 34px;
@@ -164,13 +168,15 @@
             border: 1px solid #dddddd;
             margin: 0 5px;
             cursor: pointer;
-            &:hover{
+
+            &:hover {
                 background: #22b45f;
                 border: 1px solid #22b45f;
                 color: #fff;
             }
         }
-        .cur{
+
+        .cur {
             background: #22b45f;
             border: 1px solid #22b45f;
             color: #fff;

@@ -685,6 +685,7 @@
 
         li a {
             font-size: 16px;
+            color: black;
         }
     }
 
