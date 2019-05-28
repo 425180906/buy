@@ -164,7 +164,7 @@
                     <th style="width: 15%">截止日期</th>
                     <th style="width: 15%">意向单价（元）</th>
                 </tr>
-                <tr v-for="item in list1">
+                <tr v-for="item in list1" :key="item.index">
                     <td>{{item.id}}</td>
                     <td><a :href="item.url">{{item.name}}</a></td>
                     <td>{{item.time}}</td>
@@ -181,7 +181,7 @@
                     <th style="width: 15%">发布时间</th>
                     <th style="width: 15%">意向单价（元）</th>
                 </tr>
-                <tr v-for="item in list2">
+                <tr v-for="item in list2" :key="item.index">
                     <td>{{item.id}}</td>
                     <td><a :href="item.url">{{item.name}}</a></td>
                     <td>{{item.time}}</td>
@@ -200,7 +200,7 @@
                     <th style="width: 15%">成交时间</th>
                     <th style="width: 10%">成交方式</th>
                 </tr>
-                <tr v-for="item in list3">
+                <tr v-for="item in list3" :key="item.index">
                     <td>{{item.id}}</td>
                     <td><a :href="item.url" style="width: 340px">{{item.name}}</a></td>
                     <td>{{item.county}}</td>
@@ -238,24 +238,28 @@
                 </h3>
                 <ul class="jywd-ul">
 
-                    <li><a href="/article/jywd/201804/20180400000191.shtml" target="_blank" title="章丘区农村产权交易中心"
-                           class="complink"><span>章丘区</span><b class="comptime">0531-83327622</b></a></li>
-                    <li><a href="/article/jywd/201810/20181000000208.shtml" target="_blank" title="长清区农村产权交易中心"
-                           class="complink"><span>长清区</span><b class="comptime">0531-87236936</b></a></li>
-                    <li><a href="/article/jywd/201810/20181000000207.shtml" target="_blank" title="历城区农村产权交易中心"
-                           class="complink"><span>历城区</span><b class="comptime">0531-68657562</b></a></li>
-                    <li><a href="/article/jywd/201810/20181000000206.shtml" target="_blank" title="平阴县农村产权交易中心"
-                           class="complink"><span>平阴县</span><b class="comptime">0531-87871148</b></a></li>
-                    <li><a href="/article/jywd/201810/20181000000205.shtml" target="_blank" title="济阳县农村产权交易中心"
-                           class="complink"><span>济阳县</span><b class="comptime">0531-81170395</b></a></li>
-                    <li><a href="/article/jywd/201810/20181000000204.shtml" target="_blank" title="商河县农村产权交易中心"
-                           class="complink"><span>商河县</span><b class="comptime">0531-84883696</b></a></li>
-                    <li><a href="/article/jywd/201810/20181000000203.shtml" target="_blank" title="市中区农村产权交易中心"
-                           class="complink"><span>市中区</span><b class="comptime">0531-</b></a></li>
-                    <li><a href="/article/jywd/201810/20181000000202.shtml" target="_blank" title="槐荫区农村产权交易中心"
-                           class="complink"><span>槐荫区</span><b class="comptime">0531-</b></a></li>
-                    <li><a href="/article/jywd/201810/20181000000201.shtml" target="_blank" title="天桥区农村产权交易中心"
-                           class="complink"><span>天桥区</span><b class="comptime">0531-</b></a></li>
+                    <li><a href="/" target="_blank" title="红花岗区农村产权交易中心"
+                           class="complink"><span>红花岗区</span><b class="comptime">0852-</b></a></li>
+                    <li><a href="/" target="_blank" title="汇川区农村产权交易中心"
+                           class="complink"><span>汇川区</span><b class="comptime">0852-</b></a></li>
+                    <li><a href="/" target="_blank" title="播州区农村产权交易中心"
+                           class="complink"><span>播州区</span><b class="comptime">0852-</b></a></li>
+                    <li><a href="/" target="_blank" title="桐梓县农村产权交易中心"
+                           class="complink"><span>桐梓县</span><b class="comptime">0852-</b></a></li>
+                    <li><a href="/" target="_blank" title="绥阳县农村产权交易中心"
+                           class="complink"><span>绥阳县</span><b class="comptime">0852-</b></a></li>
+                    <li><a href="/" target="_blank" title="正安县农村产权交易中心"
+                           class="complink"><span>正安县</span><b class="comptime">0852-</b></a></li>
+                    <li><a href="/" target="_blank" title="凤冈县农村产权交易中心"
+                           class="complink"><span>凤冈县</span><b class="comptime">0852-</b></a></li>
+                    <li><a href="/" target="_blank" title="湄潭县农村产权交易中心"
+                           class="complink"><span>湄潭县</span><b class="comptime">0852-</b></a></li>
+                    <li><a href="/" target="_blank" title="余庆县农村产权交易中心"
+                           class="complink"><span>余庆县</span><b class="comptime">0852-</b></a></li>
+                    <li><a href="/" target="_blank" title="习水县农村产权交易中心"
+                           class="complink"><span>习水县</span><b class="comptime">0852-</b></a></li>
+                    <li><a href="/" target="_blank" title="赤水县农村产权交易中心"
+                           class="complink"><span>赤水县</span><b class="comptime">0852-</b></a></li>
 
                 </ul>
             </div>
@@ -487,7 +491,7 @@
                     },
                     {
                         id: '2019AC370181109171',
-                        name: '出让济南市章丘市刁镇南芽村565.26亩农村土地经营权\n',
+                        name: '出让济南市章丘市刁镇南芽村565.26亩农村土地经营权',
                         county: '',
                         time: '2019-02-26',
                         paymethod: '协议转让',
@@ -780,6 +784,7 @@
 
         li a {
             color: #000;
+            display: block;
 
             &:hover {
                 color: #22b45f;

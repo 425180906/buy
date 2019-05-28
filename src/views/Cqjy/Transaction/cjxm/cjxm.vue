@@ -45,11 +45,15 @@
                     </td>
                     <td>
                         <p>挂牌开始时间:</p>
-                        <input type="text" class="ipttxt timelog">
+                        <label>
+                            <input type="text" class="ipttxt timelog" placeholder="20xx-xx-xx">
+                        </label>
                     </td>
                     <td>
                         <p>结束时间:</p>
-                        <input type="text" class="ipttxt timelog">
+                        <label>
+                            <input type="text" class="ipttxt timelog">
+                        </label>
                         <router-link to="">查询</router-link>
                     </td>
                 </tr>

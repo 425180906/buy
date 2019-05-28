@@ -43,6 +43,7 @@
     .jytj-box {
         width: 100%;
         border-collapse: collapse;
+        margin: 8px;
 
         tr {
             border: 1px solid #c0c0c0;
