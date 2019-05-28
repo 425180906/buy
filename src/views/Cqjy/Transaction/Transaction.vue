@@ -54,10 +54,12 @@
                     display: block;
                     &:hover{
                         background-color: #22b45f;
+                        border: 1px solid #22b45f;
                         color: #fff;
                     }
                     &.router-link-exact-active {
                         background-color: #22b45f;
+                        border: 1px solid #22b45f;
                         color: #fff;
                     }
                 }

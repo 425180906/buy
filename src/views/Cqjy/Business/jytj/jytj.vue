@@ -22,9 +22,11 @@
                 </tr>
                 <tr>
                     <td colspan='2'>
-                        <div class="tocenter"><a>
-                            <span><span class="search-log">查询</span></span>
-                        </a></div>
+                        <div class="tocenter">
+                            <a>
+                                <span><span class="search-log">查询</span></span>
+                            </a>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -41,12 +43,17 @@
 
 <style scoped lang="scss">
     .jytj-box {
-        width: 100%;
+        width: 970px;
         border-collapse: collapse;
         margin: 8px;
 
         tr {
             border: 1px solid #c0c0c0;
+            width: 100%;
+
+            td {
+                border-right: 1px solid #c0c0c0;
+            }
         }
 
         th {
@@ -97,7 +104,8 @@
 
             &:hover {
                 background: url(../../../../image/button_a_bg.gif) no-repeat bottom right;
-                span{
+
+                span {
                     background: url(../../../../image/button_span_bg.gif) no-repeat bottom left;
                     color: #ffa070;
                 }
@@ -106,20 +114,20 @@
             span {
                 display: inline-block;
                 background: url(../../../../image/button_span_bg.gif) no-repeat top left;
-                padding: 4px 0px 4px 18px;
+                padding: 4px 0 4px 18px;
                 line-height: 16px;
                 height: 16px;
 
                 .search-log {
                     background: url(../../../../image/search.png) no-repeat;
                     vertical-align: middle;
-                    padding: 0px 0px 0px 18px;
+                    padding: 0 0 0 18px;
                 }
             }
         }
     }
 
-    .search-tb{
+    .search-tb {
         height: 600px;
     }
 </style>
