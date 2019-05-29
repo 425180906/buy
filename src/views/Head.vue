@@ -60,7 +60,7 @@
                 <p style="font-size: 22px;padding: 25px 0px 20px">遵义市农村产权交易信息平台</p>
                 版权所有 遵义市农业农村局 Copyright © 2018-2020 All Right Reserved<br>
                 技术支持：遵义小红椒网络科技有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开发单位：遵义小红椒网络科技有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="http://www.miitbeian.gov.cn/" target="_blank" style="color: #ffffff;">鲁ICP备05015243号-3</a>
+                <a  style="color: #ffffff;">鲁ICP备05015243号-3</a>
                 <p class="blues">
                     <router-link to="http://bszs.conac.cn/sitename?method=show&id=52975E0458E8242DE053012819AC2F10">
                         <img src="../image/blue.png">
