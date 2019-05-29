@@ -6,10 +6,10 @@
                 <!-- 公告栏 -->
                 <div class="tagsbox">
                     <ul class="tags">
-                        <li id="tag1" class="taghover" @mousemove="changeTag1"><a>成交公告</a></li>
-                        <li id="tag2" @mousemove="changeTag2"><a>抵押公告</a></li>
-                        <li id="tag3" @mousemove="changeTag3"><a>解押公告</a></li>
-                        <li id="tag4" @mousemove="changeTag4"><a>中标项目</a></li>
+                        <li id="tag1" class="taghover" @mousemove="changeTag1"><p>成交公告</p></li>
+                        <li id="tag2" @mousemove="changeTag2"><p>抵押公告</p></li>
+                        <li id="tag3" @mousemove="changeTag3"><p>解押公告</p></li>
+                        <li id="tag4" @mousemove="changeTag4"><p>中标项目</p></li>
                         <p class="clearBoth"></p>
                     </ul>
                     <ul class="ggboxs">
@@ -211,7 +211,7 @@
                 <ul id="grgx-top" class="grgx-tabs gq-tab">
                     <li id="grgq" @mousemove="changegq">个人供求</li>
                     <li id="grxq" @mousemove="changexq">个人需求</li>
-                    <p><a href="">个人供求发布</a></p>
+                    <p><a >个人供求发布</a></p>
                     <router-link class="grgq-more" id="gqmore" to="/Transaction">更多></router-link>
                     <router-link class="grgq-more" id="gxmore" to="/Transaction">更多></router-link>
                     <div class="clearBoth"></div>
@@ -238,27 +238,27 @@
                 </h3>
                 <ul class="jywd-ul">
 
-                    <li><a href="/" target="_blank" title="红花岗区农村产权交易中心"
+                    <li><a  target="_blank" title="红花岗区农村产权交易中心"
                            class="complink"><span>红花岗区</span><b class="comptime">0852-</b></a></li>
-                    <li><a href="/" target="_blank" title="汇川区农村产权交易中心"
+                    <li><a  target="_blank" title="汇川区农村产权交易中心"
                            class="complink"><span>汇川区</span><b class="comptime">0852-</b></a></li>
-                    <li><a href="/" target="_blank" title="播州区农村产权交易中心"
+                    <li><a  target="_blank" title="播州区农村产权交易中心"
                            class="complink"><span>播州区</span><b class="comptime">0852-</b></a></li>
-                    <li><a href="/" target="_blank" title="桐梓县农村产权交易中心"
+                    <li><a target="_blank" title="桐梓县农村产权交易中心"
                            class="complink"><span>桐梓县</span><b class="comptime">0852-</b></a></li>
-                    <li><a href="/" target="_blank" title="绥阳县农村产权交易中心"
+                    <li><a  target="_blank" title="绥阳县农村产权交易中心"
                            class="complink"><span>绥阳县</span><b class="comptime">0852-</b></a></li>
-                    <li><a href="/" target="_blank" title="正安县农村产权交易中心"
+                    <li><a  target="_blank" title="正安县农村产权交易中心"
                            class="complink"><span>正安县</span><b class="comptime">0852-</b></a></li>
-                    <li><a href="/" target="_blank" title="凤冈县农村产权交易中心"
+                    <li><a  target="_blank" title="凤冈县农村产权交易中心"
                            class="complink"><span>凤冈县</span><b class="comptime">0852-</b></a></li>
-                    <li><a href="/" target="_blank" title="湄潭县农村产权交易中心"
+                    <li><a  target="_blank" title="湄潭县农村产权交易中心"
                            class="complink"><span>湄潭县</span><b class="comptime">0852-</b></a></li>
-                    <li><a href="/" target="_blank" title="余庆县农村产权交易中心"
+                    <li><a  target="_blank" title="余庆县农村产权交易中心"
                            class="complink"><span>余庆县</span><b class="comptime">0852-</b></a></li>
-                    <li><a href="/" target="_blank" title="习水县农村产权交易中心"
+                    <li><a  target="_blank" title="习水县农村产权交易中心"
                            class="complink"><span>习水县</span><b class="comptime">0852-</b></a></li>
-                    <li><a href="/" target="_blank" title="赤水县农村产权交易中心"
+                    <li><a  target="_blank" title="赤水县农村产权交易中心"
                            class="complink"><span>赤水县</span><b class="comptime">0852-</b></a></li>
 
                 </ul>
@@ -280,9 +280,7 @@
                         </p>
                         <div class="clearBoth"></div>
                         <div id="jytj-index" style="padding-top: 8px">
-                            <iframe src="http://utrm.jnnccqjyw.cn/utr/statistics/statistics-trade.action"
-                                    name="iframe_trade" frameborder="0" scrolling="no" style="width:100%;height:250px;"
-                                    marginheight="0" marginwidth="0"></iframe>
+
                         </div>
                         <div id="dbtj-index" style="padding-top: 8px"></div>
                     </div>
@@ -687,7 +685,7 @@
             text-align: center;
         }
 
-        li a {
+        li p {
             font-size: 16px;
             color: black;
         }
